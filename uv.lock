@@ -562,6 +562,17 @@ wheels = [
 ]
 
 [[package]]
+name = "flashinfer-python"
+version = "0.2.5"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "ninja" },
+    { name = "numpy" },
+    { name = "torch" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b2/c4/9ec0f79e2480fc5c93307c4a1ac903e5cf33c551c0eaeb648196234b55af/flashinfer_python-0.2.5.tar.gz", hash = "sha256:990aa090ef781783e76b836696ece4efd23956f72b5696d622fc619a61162aef", size = 2492267 }
+
+[[package]]
 name = "frozenlist"
 version = "1.6.0"
 source = { registry = "https://pypi.org/simple" }
@@ -2843,18 +2854,22 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "datasets" },
+    { name = "flashinfer-python" },
     { name = "ipykernel" },
     { name = "jinja2" },
     { name = "jsonlines" },
+    { name = "typer" },
     { name = "vllm" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "datasets", specifier = ">=3.5.0" },
+    { name = "flashinfer-python", specifier = ">=0.2.5" },
     { name = "ipykernel", specifier = ">=6.29.5" },
     { name = "jinja2", specifier = ">=3.1.6" },
     { name = "jsonlines", specifier = ">=4.0.0" },
+    { name = "typer", specifier = ">=0.15.2" },
     { name = "vllm", specifier = ">=0.8.4" },
 ]
 
